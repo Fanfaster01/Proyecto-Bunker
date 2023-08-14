@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowbite Flask</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
+    <link rel="stylesheet" href="{{url_for('static',filename='dist/css/styles.css')}}">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <section class="layout">
+
+        <!-- BARRA LATERAL -->
+
+        <div class="barra-lateral">
+            <div class="logo">  
+                <p>BK-Admin®</p>
+            </div>
+            <div class="opciones">
+                <a href="/">Inicio</a>
+                <a href="/registrarCompras">Compras</a>
+                <a href="/registrarVentas">Ventas</a>
+                <a href="/proveedores/VerProveedor">Proveedores</a>
+            </div>
+        </div>
+
+        <!-- CONTENIDO -->
+
+        <div class="contenido">
+            
+            {% block navegacion %}
+            {% endblock %}
+            
+            <div>
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+
+
+    </section>
+
+    <script src="https://unpkg.com/flowbite@1.8.1/dist/flowbite.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.0/flowbite.min.js"></script>
+</body>
+
+</html>

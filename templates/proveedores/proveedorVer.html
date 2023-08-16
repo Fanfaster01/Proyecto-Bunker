@@ -1,4 +1,4 @@
-{% extends "proveedores.html" %}
+{% extends "/proveedores/proveedores.html" %}
 
 {% block content %}
 
@@ -10,7 +10,7 @@
             {% with firstrow = loop.index0 == 0 %}
                 {% for value in row %}
                     {% if firstrow %}
-                        <th scope="col" class="px-6 py-3 bg-gray-100 border-b">
+                        <th scope="col" class="px-6 py-3 bg-gray-300 border-b">
                             {{ value }}
                         </th>
                     {% else %}

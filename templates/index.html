@@ -9,7 +9,11 @@
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/output.css')}}">
     <link rel="stylesheet" href="{{url_for('static',filename='dist/css/styles.css')}}">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@800&display=swap" rel="stylesheet"> 
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.8.1/flowbite.min.css" rel="stylesheet" />
+    <link href="https://unpkg.com/flowbite@1.8.1/dist/flowbite.css" rel="stylesheet" />
 </head>
 
 <body>
@@ -19,12 +23,12 @@
         <!-- BARRA LATERAL -->
 
         <div class="barra-lateral">
-            <div class="logo">  
-                <p>BK-Admin®</p>
+            <div class="logo flex text-center">  
+                <p style="color: rgb(12, 93, 175);">BK</p><span>-Admin®</span>
             </div>
             <div class="opciones">
                 <a href="/">Inicio</a>
-                <a href="/registrarCompras">Compras</a>
+                <a href="/compras/Ver/VerCompras">Compras</a>
                 <a href="/registrarVentas">Ventas</a>
                 <a href="/proveedores/VerProveedor">Proveedores</a>
             </div>
@@ -37,7 +41,7 @@
             {% block navegacion %}
             {% endblock %}
             
-            <div>
+            <div class="contenido2">
                 {% block content %}
                 {% endblock %}
             </div>

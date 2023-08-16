@@ -1,0 +1,23 @@
+{% extends "/proveedores/proveedores.html" %}
+
+{% block content %}
+
+<section class="contenido p-4 mr-4">
+    <div class="bg-white py-8 px-4 mx-auto max-w-2xl lg:py-16 overflow-x-auto shadow-md sm:rounded-lg">
+        <h2 class="mb-4 text-xl font-bold text-gray-900">Editar Proveedores:</h2>
+        <form action="/proveedores/EditarProveedor" method="POST" enctype="multipart/form-data">
+            <div class="flex gap-4 sm:gap-6">
+                <div class="w-full">
+                    <label for="RIF" class="font-bold block mb-2 text-sm text-gray-900">Buscar Proveedor por Rif:</label>
+                    <input type="text" name="RIF" id="RIF" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                    focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="J-00000000-0" required="">
+                </div>
+            <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 
+            rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800">
+                Buscar Proveedor
+            </button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}   

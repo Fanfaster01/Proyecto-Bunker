@@ -1,0 +1,49 @@
+{% extends "/proveedores/proveedores.html" %}
+
+{% block content %}
+
+<section class="contenido p-4 mr-4">
+    <div class="bg-white py-8 px-4 mx-auto max-w-3xl lg:py-16 overflow-x-auto shadow-md sm:rounded-lg">
+        <h2 class="mb-4 text-xl font-bold text-gray-900">Agrega Nuevo Porveedor:</h2>
+        <form action="/proveedores/agregarProveedor" method="POST" enctype="multipart/form-data">
+            <div class="grid gap-4 sm:grid-cols-2 sm:gap-6">
+                <div class="sm:col-span-2">
+                    <label for="RAZON_SOCIAL" class="font-bold block mb-2 text-sm text-gray-900">Razón Social</label>
+                    <input type="text" name="RAZON_SOCIAL" id="RAZON_SOCIAL" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                    focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" required="">
+                </div>
+                <div class="w-full">
+                    <label for="RIF" class="font-bold block mb-2 text-sm text-gray-900">Rif</label>
+                    <input type="text" name="RIF" id="RIF" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                    focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="J-00000000-0" required="">
+                </div>
+                <div class="w-full">
+                    <label for="TELEFONO" class="font-bold block mb-2 text-sm text-gray-900">Teléfono</label>
+                    <input type="text" name="TELEFONO" id="TELEFONO" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg 
+                    focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5" placeholder="0414-555-5555" required="">
+                </div>
+                <div class="w-full sm:col-span-2 text-center">
+                    <label for="PORCENTAJE" class="font-bold block mb-2 text-sm text-gray-900">Porcentaje Retenido</label>
+                    <select id="PORCENTAJE" name="PORCENTAJE" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm text-center rounded-lg focus:ring-primary-500 
+                    focus:border-primary-500 block w-full p-2.5 ">
+                        <option selected="">Porcentaje</option>
+                        <option value="75%">75%</option>
+                        <option value="100%">100%</option>
+                        
+                    </select>
+                </div>
+                <div class="sm:col-span-2">
+                    <label for="DIRECCION" class="font-bold block mb-2 text-sm text-gray-900 dark:text-white">Dirección Fiscal</label>
+                    <textarea id="DIRECCION" name="DIRECCION" rows="8" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 
+                    focus:ring-primary-500 focus:border-primary-500"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 
+            rounded-lg focus:ring-4 focus:ring-primary-200 hover:bg-primary-800">
+                Registrar Proveedor
+            </button>
+        </form>
+    </div>
+</section>
+
+{% endblock %}
